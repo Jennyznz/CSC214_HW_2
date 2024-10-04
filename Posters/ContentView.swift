@@ -8,17 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    let movies: [Movie] = [
+            
+    ]
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            List {
+                ForEach(movies) { movie in
+                    NavigationLink(destination: Image(movie.image)) {
+                        HStack {
+                            
+                            }
+                        }
+                        .padding(.vertical, 8)
+                    }
+                }
+            }
+            .navigationTitle("Movie Posters")
         }
-        .padding()
     }
-}
+//}
 
-#Preview {
-    ContentView()
+struct Preview: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
