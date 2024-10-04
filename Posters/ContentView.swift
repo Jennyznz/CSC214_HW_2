@@ -22,7 +22,22 @@ struct ContentView: View {
                 ForEach(movies) { movie in
                     NavigationLink(destination: Image(movie.image)) {
                         HStack {
-                            
+                            Image(movie.image)
+                                .resizable()
+                                .frame(width: 100, height: 150)
+                                .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+                            VStack(alignment: .leading) {
+                                Text(movie.title)
+                                    .font(.headline)
+                                    .fontWeight(.bold)
+                                
+                                Text("Released: \(movie.year)")
+                                    .font(.subheadline)
+                                    .foregroundColor(.gray)
+                                
+                                Text("Lead Actor: \(movie.lead)")
+                                    .font(.subheadline)
+                                    .fontWeight(.medium)
                             }
                         }
                         .padding(.vertical, 8)
@@ -32,7 +47,7 @@ struct ContentView: View {
             .navigationTitle("Movie Posters")
         }
     }
-//}
+}
 
 struct Preview: PreviewProvider {
     static var previews: some View {
