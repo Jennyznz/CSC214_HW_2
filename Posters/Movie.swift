@@ -15,10 +15,5 @@ struct Movie: Identifiable {
     var image: String // images are Strings
     var lead: String
 }
-    
-
-
-
-
 
 

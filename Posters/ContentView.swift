@@ -9,7 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     let movies: [Movie] = [
-            
+            Movie(title: "K-on", year: "2011", image: "k-on", lead: "Ui Hirasawa"),
+            Movie(title: "Midsommar", year: "2019", image: "midsommar", lead: "Florence Pugh"),
+            Movie(title: "Gangs of New York", year: "2002", image: "gangs", lead: "Daniel Day-Lewis"),
+            Movie(title: "Jaws", year: "1975", image: "jaws", lead: "Richard Dreyfuss"),
+            Movie(title: "Only the River Flows", year: "2023", image: "river", lead: "Zhu Yilong"),
     ]
     
     var body: some View {
