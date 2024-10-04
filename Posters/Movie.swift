@@ -2,7 +2,7 @@
 //  Movie.swift
 //  Posters
 //
-//  Created by Zheng, Jenny on 10/4/24.
+//  
 //
 
 import Foundation
